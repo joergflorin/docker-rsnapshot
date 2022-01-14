@@ -1,4 +1,4 @@
-# http-munki
+# docker-rsnapshot
 
 Docker service definitions for backup the whole home directory with rsnapshot.
 
