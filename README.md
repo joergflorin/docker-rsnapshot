@@ -1,15 +1,17 @@
-# docker
+# http-munki
 
-Docker service definitions for docker-compose.
+Docker service definitions for backup the whole home directory with rsnapshot.
 
-To update a docker container change to the desired sub directory and run following command:
+You have to create a file `env.txt` in this directory containg one statement:
 
 ```
-docker-compose up -d
+BACKUP_DIR=/my/backup/root/directory
 ```
 
-Some compose definition folders contains an install script to use an `env.txt` file with environment definitions:
+You also have to configure the backup settings in `./config/rsnapshot.conf` and `./config/crontabs/root`.
 
 ```
 ./install.sh
 ```
+
+see https://hub.docker.com/r/linuxserver/rsnapshot
