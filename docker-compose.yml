@@ -5,6 +5,10 @@ services:
     image: lscr.io/linuxserver/rsnapshot
     container_name: rsnapshot
     restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: '0.25'
 
     volumes:
       - ./config:/config:rw
